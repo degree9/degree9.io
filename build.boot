@@ -19,7 +19,7 @@
   '[tailrecursion.boot-hoplon :refer [hoplon prerender html2cljs]])
 
 (deftask dev
-  "Build hoplon.io for local development."
+  "Build degree9.io for local development."
   []
   (comp
     (watch)
@@ -30,7 +30,7 @@
     (speak)))
 
 (deftask prod
-  "Build hoplon.io for production deployment."
+  "Build degree9.io for production deployment."
   []
   (comp
     (hoplon :pretty-print true)
