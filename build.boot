@@ -22,6 +22,7 @@
   "Build degree9.io for local development."
   []
   (comp
+    (cljs-repl)
     (watch)
     (hoplon :pretty-print true)
     (cljs :optimizations :none
@@ -36,3 +37,10 @@
     (hoplon :pretty-print true)
     (cljs :optimizations :advanced :source-map true)
     (prerender)))
+
+(swap! boot.repl/*default-dependencies*
+       concat '[[lein-light-nrepl "0.1.0"]
+                [org.clojure/clojurescript "0.0-2511"]])
+
+(swap! boot.repl/*default-middleware*
+       conj 'lighttable.nrepl.handler/lighttable-ops)
