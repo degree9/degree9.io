@@ -1,0 +1,1 @@
+{:rename-macros {}, :renames {}, :use-macros {}, :excludes #{}, :name boot.cljs.main9735, :imports nil, :requires {app.index app.index}, :uses nil, :require-macros nil, :doc nil}
